@@ -12,12 +12,14 @@ import {
 } from '@angular/core';
 import {ProductType} from "../../types/product.type";
 import {TitleComponent} from "../title/title.component";
+import {CartProductService} from "../../services/cart-product.service";
 
 @Component({
   selector: 'product',
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss'],
   // encapsulation:ViewEncapsulation.None
+  providers: [CartProductService]
 })
 export class ProductComponent {
 
@@ -43,7 +45,8 @@ export class ProductComponent {
   @ViewChild('elem')
   private elem!: ElementRef;
 
-  constructor() {
+  constructor(public cartProductService: CartProductService) {
+
     this.product = {
       image: '',
       title: '',
@@ -85,6 +88,7 @@ export class ProductComponent {
   // }
 
   addProductToCart() {
+    this.cartProductService.count++;
     this.addToCartEvent.emit(this.titleComponent.title);
   }
 
