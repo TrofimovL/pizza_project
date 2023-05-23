@@ -14,7 +14,6 @@ export class ProductsComponent implements OnInit {
               // private cartService: CartService,
               // private router: Router
   ) {
-    console.log(111)
   }
 
   ngOnInit() {
