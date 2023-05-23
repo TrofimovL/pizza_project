@@ -16,7 +16,7 @@
 
 
 
-<!--  <custom-title [title]="product.title" #customTitle></custom-title>-->
+<!--  <custom-title [title]="product-card.title" #customTitle></custom-title>-->
   <custom-title [title]="product.title | uppercase">
 <!--    <p first>test message</p>-->
 <!--    <p second #second>wow</p>-->
@@ -25,18 +25,21 @@
 
 
   <div class="product-text">
-<!--    {{product.description | chickenDescription}}-->
+<!--    {{product-card.description | chickenDescription}}-->
     {{product.description | wordUpper: ['томат','сыр', 'сос']}}
   </div>
   <div class="product-action" #elem>
-    <button class="btn btn-add-to-cart" (click)="addProductToCart()">
+    <a class="btn btn-add-to-cart" routerLink="/order" [queryParams]="{product: product.title}">
       В корзину
-    </button>
+    </a>
+    <a class="btn btn-white" [routerLink]="['/products', product.id]">
+      Подробнее
+    </a>
   </div>
-<!--  <div>{{product.datetime | date: 'full' | uppercase}}</div>-->
-<!--  <div>{{product.datetime | date: 'dd.MM.yyyy HH:mm' }}</div>-->
+<!--  <div>{{product-card.datetime | date: 'full' | uppercase}}</div>-->
+<!--  <div>{{product-card.datetime | date: 'dd.MM.yyyy HH:mm' }}</div>-->
 
-  <div>{{cartProductService.getCommonCount()}}</div>
+<!--  <div>{{cartProductService.getCommonCount()}}</div>-->
 </div>
 
-<!--<button class="btn btn-add-to-cart" (click)="addToCart(product, orderElement)">-->
+<!--<button class="btn btn-add-to-cart" (click)="addToCart(product-card, orderElement)">-->

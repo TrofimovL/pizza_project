@@ -24,6 +24,9 @@
   font-size: 16px;
   color: rgb(164, 107, 0);
   line-height: 1;
+  &.active{
+    color: black;
+  }
 }
 
 .burger {
@@ -86,6 +89,10 @@
   .menu-item {
     margin: 15px 0;
   }
+
+  //.menu-item a.active{
+  //  color: black;
+  //}
 
   .burger {
     display: block;
