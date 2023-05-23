@@ -7,5 +7,9 @@
       <!--      <product-card *ngFor="let product-card of products" [pp]="product-card" (aa)="addToCart($event, orderElement)"></product-card>-->
       <product-card *ngFor="let product of products" [product]="product"></product-card>
     </div>
+
+    <div *ngIf="loading" class="loader-bg">
+      <div class="loader"></div>
+    </div>
   </div>
 </section>

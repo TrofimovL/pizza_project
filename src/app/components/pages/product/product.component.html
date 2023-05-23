@@ -10,7 +10,7 @@
 
       <ng-template #productImageBlock>
         <div class="product-image" *ngIf="product.image; else defaultImageBlock">
-          <img src="assets/images/products/{{product.image}}">
+          <img src="{{product.image}}">
         </div>
       </ng-template>
 
