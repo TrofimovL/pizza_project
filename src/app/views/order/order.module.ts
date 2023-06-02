@@ -7,6 +7,7 @@ import {SharedModule} from "../../shared/shared.module";
 import {HomeRoutingModule} from "../home/home-routing.module";
 import {RouterModule} from "@angular/router";
 import {FormsModule} from "@angular/forms";
+import {TuiButtonModule} from "@taiga-ui/core";
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import {FormsModule} from "@angular/forms";
     CommonModule,
     RouterModule,
     FormsModule,
-    OrderRoutingModule
+    OrderRoutingModule,
+    TuiButtonModule
   ],
   exports:[
     OrderRoutingModule

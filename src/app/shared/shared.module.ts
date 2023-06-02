@@ -8,6 +8,7 @@ import {ChickenDescriptionPipe} from "./pipes/chicken-description.pipe";
 import {ChichenProductsPipe} from "./pipes/chichen-products.pipe";
 import {WordUpperPipe} from "./pipes/word-upper.pipe";
 import {RouterModule} from "@angular/router";
+import { PopupComponent } from './components/popup/popup.component';
 
 
 
@@ -20,12 +21,13 @@ import {RouterModule} from "@angular/router";
     ChickenDescriptionPipe,
     ChichenProductsPipe,
     WordUpperPipe,
+    PopupComponent,
   ],
   imports: [
     CommonModule,
     RouterModule,
   ],
-  exports:[
+  exports: [
     ProductCardComponent,
     TitleComponent,
     CoolInputDirective,
@@ -33,6 +35,7 @@ import {RouterModule} from "@angular/router";
     ChickenDescriptionPipe,
     ChichenProductsPipe,
     WordUpperPipe,
+    PopupComponent,
   ]
 })
 export class SharedModule { }

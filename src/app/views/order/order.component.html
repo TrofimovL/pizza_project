@@ -21,7 +21,7 @@
              placeholder="Пицца" [(ngModel)]="formValues.productTitle">
       <input type="text" class="order-input" id="address-input" name="address" placeholder="Адрес доставки" [(ngModel)]="formValues.address">
       <input type="text" class="order-input" coolInput id="phone-input" placeholder="Телефон" [(ngModel)]="formValues.phone">
-      <button class="btn" (click)="createOrder()">Оформить заказ</button>
+      <button class="btn" tuiButton (click)="createOrder()">Оформить заказ</button>
     </div>
     <div class="order-image">
       <img src="../../../assets/images/pizzzzza.png" alt="Pizza">
